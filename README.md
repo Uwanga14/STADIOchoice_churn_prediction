@@ -10,7 +10,7 @@ STADIOchoice is facing a challenge of increasing churn rate within its streaming
 # Data request
 To build a churn prediction model we will need data from STADIOchoice that allows us to understand subscriber behaviour, engagement, payment patterns, content consumption, customer service interactions, and historical cancellations. 
 
-DATASET 1: Subscriber data
+### DATASET 1: Subscriber data
 | Column Name          | Data Type   | Example      | Additional Information                                |
 |---------------------|-------------|-------------|------------------------------------------------------|
 | Subscriber ID       | String      | Sub1432     | It is a unique customer identifier                   |
@@ -22,7 +22,7 @@ DATASET 1: Subscriber data
 | Churn date          | Date        | 2026-09-03  | Churn date                                           |
 | Acquisition channel | String      | Facebook ad | Marketing source used for acquisition                |
 
-DATASET 2: Subscription & Billing history
+### DATASET 2: Subscription & Billing history
 | Column Name               | Data Type   | Example      | Additional Information                               |
 |--------------------------|------------|--------------|-----------------------------------------------------|
 | Subscriber ID            | String     | Sub1432      | It is a unique customer identifier                  |
@@ -37,7 +37,7 @@ DATASET 2: Subscription & Billing history
 | Cancellation request date| Date       | 2026-04-01   | Date cancellation was requested                     |
 | Tenure                   | Numeric    | 765          | Duration of subscription                            |
 
-DATASET 3: Streaming Viewing Activity
+### DATASET 3: Streaming Viewing Activity
 | Column Name                   | Data Type    | Example | Additional Information                 |
 |------------------------------|-------------|---------|----------------------------------------|
 | Subscriber ID                | String      | Sub1432 | A unique customer identifier           |
@@ -46,14 +46,16 @@ DATASET 3: Streaming Viewing Activity
 | Type of content being watched| Categorical | sports  | The kind of content being used         |
 | Device type                  | Categorical | Mobile  | Mobile, TV, tablet                     |
 
-Additional requirements 
+### Additional requirements 
 The data provided must be at least 36 months of historical data to capture behavioural trends and seasonality. 
 
-## RAAIDD LOG
+# RAAIDD LOG
+
+This RAAIDD log outlines the key risks, actions, assumptions, issues, decisions, and dependencies relevant to the STADIOstream Subscriber Churn Prediction Project. The identified elements are closely aligned with STADIOchoice's strategic challenge of increasing streaming subscriber churn and provide a structured framework for managing project activities and potential obstacles. Furthermore, the log supports the development of a data-driven solution aimed at improving subscriber retention, enhancing customer lifetime value, and contributing to the long-term profitability and sustainability of the organisation's streaming business.
 
 | Category | Details |
 |----------|---------|
-| **Risks** | Subscriber data may contain missing values and duplicates. Not having enough historical churn data may be available to train a reliable model. |
+| **Risks** | Subscriber data from billing, viewing, and retention systems may contain missing values or inconsistent Subscriber IDs, making it difficult to accurately identify churn patterns. Not having enough historical churn data may be available to train a reliable model. |
 | **Actions** | Collect and validate the required data, clean and prepare the datasets, analyse churn patterns, build and test a predictive model, and present retention recommendations to stakeholders. |
 | **Assumptions** | Historical subscriber behaviour contains patterns that can predict churn. Subscriber IDs can be used to link all datasets, and at least 36 months of historical data is available. |
 | **Issues** | Historical churn records may be incomplete or inconsistent, making it difficult to accurately identify subscribers who have previously cancelled their subscription. |
