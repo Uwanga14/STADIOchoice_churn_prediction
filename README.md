@@ -9,6 +9,8 @@ STADIOchoice is facing a challenge of increasing churn rate within its streaming
 
 # Data request
 To build a churn prediction model we will need data from STADIOchoice that allows us to understand subscriber behaviour, engagement, payment patterns, content consumption, customer service interactions, and historical cancellations. 
+
+DATASET 1: Subscriber data
 | Column Name          | Data Type   | Example      | Additional Information                                |
 |---------------------|-------------|-------------|------------------------------------------------------|
 | Subscriber ID       | String      | Sub1432     | It is a unique customer identifier                   |
@@ -19,3 +21,38 @@ To build a churn prediction model we will need data from STADIOchoice that allow
 | Sign up date        | Date        | 2026-01-03  | Date the subscription started                        |
 | Churn date          | Date        | 2026-09-03  | Churn date                                           |
 | Acquisition channel | String      | Facebook ad | Marketing source used for acquisition                |
+
+DATASET 2: Subscription & Billing history
+| Column Name               | Data Type   | Example      | Additional Information                               |
+|--------------------------|------------|--------------|-----------------------------------------------------|
+| Subscriber ID            | String     | Sub1432      | It is a unique customer identifier                  |
+| Billing date             | Date       | 2026-01-01   | Monthly billing date                                |
+| Plan name                | String     | Premium plus | Package subscribed to                               |
+| Monthly fee              | Numeric    | 499          | Monthly subscription fee                            |
+| Payment status           | Categorical| successful   | Successful, failed, reversed                         |
+| Payment failure count    | Integer    | 2            | Number of payment failures in previous 12 months    |
+| Downgrade flag           | Boolean    | yes          | Indicates subscription downgrade                    |
+| Auto renewal             | Boolean    | yes          | Indicates auto renewal status                       |
+| Retention outcome        | Categorical| retained     | Retained or churned                                 |
+| Cancellation request date| Date       | 2026-04-01   | Date cancellation was requested                     |
+| Tenure                   | Numeric    | 765          | Duration of subscription                            |
+
+DATASET 3: Streaming Viewing Activity
+| Column Name                   | Data Type    | Example | Additional Information                 |
+|------------------------------|-------------|---------|----------------------------------------|
+| Subscriber ID                | String      | Sub1432 | A unique customer identifier           |
+| Watch duration               | Numeric     | 52      | Minutes watched                        |
+| Days since last watch        | Numeric     | 5       | Calculated metric if available         |
+| Type of content being watched| Categorical | sports  | The kind of content being used         |
+| Device type                  | Categorical | Mobile  | Mobile, TV, tablet                     |
+
+## RAAIDD LOG
+
+| Category | Details |
+|----------|---------|
+| **Risks** | Subscriber data may contain missing values and duplicates. Not enough historical churn data may be available to train a reliable model. |
+| **Actions** | Collect and validate the required data, clean and prepare the datasets, analyse churn patterns, build and test a predictive model, and present retention recommendations to stakeholders. |
+| **Assumptions** | Historical subscriber behaviour contains patterns that can predict churn. Subscriber IDs can be used to link all datasets, and at least 36 months of historical data is available. |
+| **Issues** | Historical churn records may be incomplete or inconsistent, making it difficult to accurately identify subscribers who have previously cancelled their subscription. |
+| **Decisions** | The project will focus on STADIOstream subscribers because reducing streaming churn is a key business priority and retaining customers is a primary objective. |
+| **Dependencies** | Data must be collected before it can be cleaned and analysed. Data preparation must be completed before model development, and the model must be tested before retention recommendations can be made. |
