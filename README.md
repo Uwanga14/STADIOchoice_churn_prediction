@@ -46,11 +46,14 @@ DATASET 3: Streaming Viewing Activity
 | Type of content being watched| Categorical | sports  | The kind of content being used         |
 | Device type                  | Categorical | Mobile  | Mobile, TV, tablet                     |
 
+Additional requirements 
+The data provided must be at least 36 months of historical data to capture behavioural trends and seasonality. 
+
 ## RAAIDD LOG
 
 | Category | Details |
 |----------|---------|
-| **Risks** | Subscriber data may contain missing values and duplicates. Not enough historical churn data may be available to train a reliable model. |
+| **Risks** | Subscriber data may contain missing values and duplicates. Not having enough historical churn data may be available to train a reliable model. |
 | **Actions** | Collect and validate the required data, clean and prepare the datasets, analyse churn patterns, build and test a predictive model, and present retention recommendations to stakeholders. |
 | **Assumptions** | Historical subscriber behaviour contains patterns that can predict churn. Subscriber IDs can be used to link all datasets, and at least 36 months of historical data is available. |
 | **Issues** | Historical churn records may be incomplete or inconsistent, making it difficult to accurately identify subscribers who have previously cancelled their subscription. |
