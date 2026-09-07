@@ -6,3 +6,16 @@ Investigating and addressing subscriber churn is critical to achieving STADIOcho
 
 # Problem statement
 STADIOchoice is facing a challenge of increasing churn rate within its streaming business. Monthly streaming churn has increased from 6.5% to 9.2% over the past two years, while customer acquisition costs have risen from R240 to R355 per subscriber and trial-to-paid conversion rates have declined from 41% to 33%. These trends are reducing the profitability of STADIOstream and creating a significant risk to the company’s long-term strategy, which depends on growing a successful streaming business as its satellite subscriber base continues to decline. STADIOchoice collects extensive data on subscriber viewing behaviour, billing history, cancellation records, customer support interactions, search activity, and content consumption. This data remains unclear whether these data sources can be used to accurately identify subscribers who are likely to cancel their subscriptions before churn occurs. The absence of a reliable churn prediction capability limits the company’s ability to proactively retain customers, use retention incentives effectively, and maximise customer lifetime value. The aim of this study is to investigate whether predictive data science techniques can be used to identify STADIOstream subscribers who are at a high risk of churning by analysing subscriber behaviour, billing data, customer support interactions, search activity, and cancellation history. The findings may provide evidence that supports targeted retention strategies, improves customer retention decision-making, and contributes to the long-term profitability and sustainability of STADIOchoice’s streaming business.
+
+# Data request
+To build a churn prediction model we will need data from STADIOchoice that allows us to understand subscriber behaviour, engagement, payment patterns, content consumption, customer service interactions, and historical cancellations. 
+| Column Name          | Data Type   | Example      | Additional Information                                |
+|---------------------|-------------|-------------|------------------------------------------------------|
+| Subscriber ID       | String      | Sub1432     | It is a unique customer identifier                   |
+| Subscription type   | Categorical | streaming   | Streaming, satellite, hybrid                         |
+| Subscription status | Categorical | active      | Active, cancelled, suspended, trial                  |
+| Converted to paid   | Boolean     | yes         | Shows whether a customer converted from trial to subscription |
+| Churn status        | Boolean     | yes         | Shows whether a customer churned                     |
+| Sign up date        | Date        | 2026-01-03  | Date the subscription started                        |
+| Churn date          | Date        | 2026-09-03  | Churn date                                           |
+| Acquisition channel | String      | Facebook ad | Marketing source used for acquisition                |
