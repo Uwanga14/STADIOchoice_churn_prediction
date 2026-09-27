@@ -4,7 +4,7 @@
 
 The objective of this project is to develop machine learning models that can accurately predict customer churn on a streaming platform. Two classification models were selected and evaluated using the Netflix Customer Churn Dataset. The selected models were chosen because they provide a balance between interpretability and predictive performance.
 
----
+
 
 # Model 1: Logistic Regression
 
@@ -77,7 +77,6 @@ Random Forest was selected because:
 
 The model is expected to achieve higher predictive accuracy than Logistic Regression while identifying the most important factors influencing subscriber churn.
 
----
 
 # Model Evaluation
 
