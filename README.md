@@ -61,3 +61,7 @@ This RAAIDD log outlines the key risks, actions, assumptions, issues, decisions,
 | **Issues** | Historical churn records may be incomplete or inconsistent, making it difficult to accurately identify subscribers who have previously cancelled their subscription. |
 | **Decisions** | The project will focus on STADIOstream subscribers because reducing streaming churn is a key business priority and retaining customers is a primary objective. |
 | **Dependencies** | Data must be collected before it can be cleaned and analysed. Data preparation must be completed before model development, and the model must be tested before retention recommendations can be made. |
+
+# PART C
+
+Please click on the link to watch a video presentation of the STADIOchoice briefing: https://youtu.be/BZjJ-M18Zi8
